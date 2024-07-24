@@ -1,5 +1,5 @@
 ---
-title: Some notes on "Operation System"
+title: "Operating Systems: Key Concepts and Notes"
 categories:
   - Note
 tags:
@@ -11,7 +11,7 @@ toc_label: On this page
 toc_icon: "file-alt"
 ---
 
-# Notes
+# 操作系统
 
 ## Process & thread & IPC
 
@@ -41,7 +41,6 @@ toc_icon: "file-alt"
     - 虚拟地址映射转换（开销很大）
 
 
-
 ### Thread
 
 - why：提高程序的并发度，减少调度开销
@@ -57,7 +56,6 @@ toc_icon: "file-alt"
     - 用户没有权限操控线程
 
 
-
 ### process v.s. thread
 
 - 进程是资源分配的最小单位，一个进程内的所有线程共享同一资源
@@ -68,7 +66,6 @@ toc_icon: "file-alt"
 - 进程和线程都具有生命周期，能够创建子线程、子进程
 
 
-
 ### process v.s. program
 
 - 进程是动态的（是程序的一次活动），程序是静态的
@@ -76,13 +73,11 @@ toc_icon: "file-alt"
 - 作业由程序、数据、操作说明书三部分构成，则进程和作业/程序都是一一对应的
 
 
-
 ### Parallel（并行）和Concurrent（并发）
 
 - concurrent：在一个时间段内有多个任务在执行，但某个时间片上只有一个任务在执行，宏观上并行，微观上串行，只依赖于单核CPU，涉及多道程序（multiprogramming）设计
 - parallel：多个任务一起执行，需要依赖多核CPU
 - parallel是concurrent的子集
-
 
 
 ### mutual exclusion
@@ -94,7 +89,6 @@ toc_icon: "file-alt"
 - TSL
 - sleep and wakeup
 - semaphore
-
 
 
 ### IPC(inter-processes communication)
@@ -110,19 +104,16 @@ toc_icon: "file-alt"
   - readers and writers problem
 
 
-
 ### priority-inversion problem（优先级反转问题）
 
 - 低优先级任务持有高优先级任务所需要的临界资源，高优先级任务因此阻塞，一直等待低优先级任务释放临界资源；而由于低优先级任务获得的CPU时间片少，若出现介于两者优先级之间的中优先级任务，此任务并不需要那个临界资源，那么该任务将会获得更多的CPU时间片；若高优先级任务忙等，那么低优先级任务无法与高优先级任务争夺CPU时间片，导致无法执行，无法释放资源，进而反过来阻塞了高优先级任务，使得高优先级任务无法获得临界资源。
 - 若使用了不恰当的scheduling，这是busy-waiting所可能会导致的问题
 
 
-
 ### semaphore
 
 - 包含counter（资源数）和queue（block队列）
 - num_blocked_processes = -counter if counter < 0 else num_available_resources  = counter
-
 - p操作：申请资源，若申请失败则block（从ready队列移至block队列）
 - v操作：释放资源，若释放后block队列仍有进程，则唤醒
 - used for
@@ -133,19 +124,16 @@ toc_icon: "file-alt"
 - disadv：信号量的控制分布在整个程序中，难以分析正确性
 
 
-
 ### mutex = binary semaphore
 
 - semaphore mutex = 1
 - for n parallel programming, the semaphore counter value is ranging from 1 to -(n-1)
 
 
-
 ### Monitor
 
 - 为了克服semaphore的缺点，将信号量及其操作语句封装在一个对象内部，隐藏细节，使其更好控制
 - 为了使得进程能够在monitor中等待，使用了**condition variable**，used for `wait` and `signal`
-
 
 
 ## Scheduling
@@ -169,7 +157,6 @@ toc_icon: "file-alt"
   - batch systems，调度的目标是**max throughout**, min turnaround time, max CPU utilization
   - interactive systems，调度的目标是**min response time**, best proportionality
   - real-time systems，调度的目标是**meeting deadlines**（在截止时间前完成所应该完成的任务）, predictability
-
 
 
 ### 单处理器进程调度算法
@@ -202,15 +189,12 @@ toc_icon: "file-alt"
     - 用户级别的平均调度，使得拥有任意数量的用户能够获得相同的CPU时间片数量
 
 
-
 ### 线程调度
 
 - 用户级线程（kernel意识不到thread的存在）
   - kernel选择一个process，由process中的runtime system选择一个thread运行（round-robin）
-
 - kernel级线程
   - 由kernel直接选择一个thread运行（round-robin）
-
 
 
 ## 其他
@@ -237,26 +221,21 @@ toc_icon: "file-alt"
 - **原语**和**广义指令**都可以被进程所调用，两者差别就是原语具有原子性，它是通过在执行过程中关闭中断实现的，一般由系统进程调用，而广义指令很多情况下可用目态下的系统进程完成，不一定要在管态执行，可以借助中断进入管态，交给对应的进程
 
 
-
 ## ext2 file system
 
 inode号与文件(File/Directory)一一对应
 
 - 打开文件，首先找到文件对应的inode号，其次找到对应的inode(index-node, 存放文件的基本信息和文件数据块位置(跟踪数据块方式：链式/索引等))，最后找到数据块(数据块中存放文件内容/目录项)
-
 - 文件名不影响inode号
-
 - 只要打开了文件，就只以inode号识别文件，因此可以在不关闭软件或重启的情况下更新，进而更新一个新的inode替换，等到下一次打开的时候，即通过新的inode找到新版文件
 
 
+<img src="/assets/images/image-ext2.png" alt="image-ext2" style="zoom:90%; display: block; margin: 0 auto;" />
 
-![](./img/ext2.png)
 
 因此data bitmap和inode bitmap是不一样的，如果inode号已经用光了，无论是否有空闲块，都无法创建文件
 
 根目录到子目录的过程：根目录inode号 --> 根目录inode --> 根目录的数据块(存放目录项，每一个目录项包含文件的基本信息和文件的inode号) --> 子目录的inode --> 子目录的数据块
-
-
 
 inode具体位置：
 
@@ -269,59 +248,37 @@ inode具体位置：
   - 1个指向三级索引块的指针
 
 
-
 总结：不是所有的数据块都是存储真正的数据，但注意inode不是存放在数据区
 
 数据块可能的内容：
-
 - 真正的数据(File/Directory)
 - 索引数据块(表)
-
-
-
 
 
 ## linux开机过程
 
 1. 加载BIOS，读取硬件信息
-
    - BIOS包含了CPU信息、设备启动顺序信息、硬盘信息、内存信息、时钟信息、PnP特性等
    - BIOS将控制权交给MBR后，就由linux控制系统
-
 2. 读取MBR
-
    - MBR包含了**引导程序**和**分区表**
    - 将MBR加载到Boot Loader中，用以将**活动分区的引导区**载入内存
    - MBR中引导程序发挥主导作用，优先于操作系统内核载入内存的指令，最后把控制权交给**活动分区的引导区**（因而主引导记录不依赖于任何操作系统，且硬盘的引导程序是可变的，因此可以实现多系统共存）
-
 3. 启动Boot Loader
-
    - 严重依赖于硬件，是在操作系统内核载入前执行的汇编程序
    - 用以初始化硬件设备、建立内存空间映射图，为最后调用操作系统内核做准备
-
 4. 加载内核，调用`start_kernal()`函数，进而调用一系列初始化函数并初始化各种设备，建立完整的linux内核环境
-
    - loader主要进行能让内核最低限度执行的初始化，而此处才是进行真正的初始化操作
-
    - 主要对进程管理（调度机制初始化、建立缓冲队列）、内存管理（初始化物理页面）、文件管理（初始化文件系统）、IO管理（初始化外中断）机制进行创建，同时初始化0号进程为idle进程，即系统空闲时占据CPU的进程
    - 最后通过`kernel_thread()`创建1号线程/进程，执行内核的`init()`函数
-
 5. 执行**第一个运行程序**`/sbin/init`，根据读取的`/etc/inittab`文件确定运行等级
-
 6. init进程执行**第一个用户层文件**`/etc/rc.d/rc.sysinit`脚本程序
-
    - 包括设定PATH、设定网络配置`/etc/sysconfig/network`、启动swap分区、设定`/proc`等等
    - 能够使得一般的用户程序可以正常地被执行，从而真正完成可供应用程序运行的系统环境
-
 7. 依据`/etc/modules.conf`文件或`/etc/modules.d`目录下的文件来装载内核模块
-
 8. 执行不同运行级别的脚本程序
-
    - 根据运行级别的不同，系统会运行rc0.d到rc6.d中的相应的脚本程序，来完成相应的初始化工作和启动相应的服务
-
 9. 执行`/etc/rc.d/rc.local`
-
    - 用户自定义脚本
-
 10. 执行`/bin/login`程序，进入登录状态
 
