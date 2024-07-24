@@ -4,9 +4,15 @@ title: "Awards"
 classes: wide
 ---
 
-2019-2020, 2020-2021 school year second-class scholarship
+## Recent
 
-2020-2021 school year three-good students
+University of Chinese Academy of Sciences (UCAS) 2023-2024 Outstanding Student
+
+## Before 2022
+
+South China University of Technology (SCUT) 2019-2020, 2020-2021 Academic Year Second-Class Scholarship
+
+South China University of Technology (SCUT) 2020-2021 Academic Year Outstanding Student
 
 Second Prize of Guangdong Province in 2020-CUMCM and 2021-CUMCM (Contemporary Undergraduate Mathematical Contest in Modeling)
 
