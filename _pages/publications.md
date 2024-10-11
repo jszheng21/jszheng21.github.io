@@ -13,7 +13,7 @@ classes: wide
   <div style="flex: 1; padding-left: 20px; font-size: 13.5px;">
     <p style="font-weight: bold;">Beyond Correctness: Benchmarking Multi-dimensional Code Generation
 for Large Language Models</p>
-    <p>Jiasheng Zheng, Boxi Cao, Zhengzhao Ma, Ruotong Pan, Hongyu Lin, Yaojie Lu, Xianpei Han, Le Sun</p>
+    <p><u>Jiasheng Zheng</u>, Boxi Cao, Zhengzhao Ma, Ruotong Pan, Hongyu Lin, Yaojie Lu, Xianpei Han, Le Sun</p>
     <div style="display: flex;">
       <a href="https://arxiv.org/abs/2407.11470" style="margin-right: 15px;">ArXiv</a>
       <a href="https://github.com/jszheng21/RACE" style="margin-right: 15px;">Github</a>
@@ -28,7 +28,7 @@ for Large Language Models</p>
   </div>
   <div style="flex: 1; padding-left: 20px; font-size: 13.5px;">
     <p style="font-weight: bold;">Multi-Facet Counterfactual Learning for Content Quality Evaluation</p>
-    <p>Jiasheng Zheng, Hongyu Lin, Boxi Cao, Meng Liao, Yaojie Lu, Xianpei Han, Le Sun</p>
+    <p><u>Jiasheng Zheng</u>, Hongyu Lin, Boxi Cao, Meng Liao, Yaojie Lu, Xianpei Han, Le Sun</p>
     <div style="display: flex;">
       <a href="https://arxiv.org/abs/2410.07693" style="margin-right: 15px;">ArXiv</a>
     </div>
@@ -43,6 +43,6 @@ for Large Language Models</p>
   </div>
   <div style="flex: 1; padding-left: 20px; font-size: 13.5px;">
     <p style="font-weight: bold;">Explicitly Diverse Visual Question Generation</p>
-    <p>Jiayuan Xie, Jiasheng Zheng, Wenhao Fang, Yi Cai, Qingbao Huang, Qing Li</p>
+    <p>Jiayuan Xie, <u>Jiasheng Zheng</u>, Wenhao Fang, Yi Cai, Qingbao Huang, Qing Li</p>
   </div>
 </div>
