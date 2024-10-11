@@ -8,7 +8,7 @@ classes: wide
 
 <div style="display: flex; align-items: center; padding: 20px 0">
   <div style="flex: 1;">
-    <img src="/assets/images/race_overview.jpg" style="width:100%;">
+    <img src="/assets/images/race_overview_v2.jpg" style="width:100%;">
   </div>
   <div style="flex: 1; padding-left: 20px; font-size: 13.5px;">
     <p style="font-weight: bold;">Beyond Correctness: Benchmarking Multi-dimensional Code Generation
@@ -18,6 +18,19 @@ for Large Language Models</p>
       <a href="https://arxiv.org/abs/2407.11470" style="margin-right: 15px;">ArXiv</a>
       <a href="https://github.com/jszheng21/RACE" style="margin-right: 15px;">Github</a>
       <a href="https://huggingface.co/spaces/jszheng/RACE_leaderboard">Leaderboard</a>
+    </div>
+  </div>
+</div>
+
+<div style="display: flex; align-items: center; padding: 20px 0">
+  <div style="flex: 1;">
+    <img src="/assets/images/mole_overview.jpg" style="width:100%;">
+  </div>
+  <div style="flex: 1; padding-left: 20px; font-size: 13.5px;">
+    <p style="font-weight: bold;">Multi-Facet Counterfactual Learning for Content Quality Evaluation</p>
+    <p>Jiasheng Zheng, Hongyu Lin, Boxi Cao, Meng Liao, Yaojie Lu, Xianpei Han, Le Sun</p>
+    <div style="display: flex;">
+      <a href="https://arxiv.org/abs/2410.07693" style="margin-right: 15px;">ArXiv</a>
     </div>
   </div>
 </div>
