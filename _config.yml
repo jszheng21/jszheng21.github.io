@@ -17,14 +17,14 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Jason Zheng"
+title                    : "Jiasheng Zheng"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Jason Zheng"
+name                     : "Jiasheng Zheng"
 description              : "An amazing website."
-url                      : "https://jasonccvx.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://jszheng21.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "jasonccvx/jasonccvx.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+repository               : "jszheng21/jszheng21.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
@@ -105,7 +105,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Jason Zheng"
+  name             : "Jiasheng Zheng"
   avatar           : "/assets/images/portrait.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Major in natural language processing."
   location         : "Beijing Haidian, China"
