@@ -131,6 +131,15 @@
     em.highlight {
       color: #e37222;
     }
+
+    .project-description {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .project-description a {
+      font-size: 14px;
+    }
   </style>
   <link rel="icon" type="image/png" href="images/limin-icon.jpg">
   <title>Jiasheng Zheng's Homepage</title>
@@ -158,8 +167,12 @@
               <p align=left>
                 <a href="https://github.com/jszheng21" class="icon-link"> <i class="fa-brands fa-github fa-2x"></i> </a> &nbsp;
                 <a href="https://scholar.google.com/citations?user=0LBR2hEAAAAJ" class="icon-link"> <i class="ai ai-google-scholar ai-2x"></i> </a> &nbsp;
+                <a href="https://orcid.org/0009-0002-3817-093X" class="icon-link"> <i class="ai ai-orcid ai-2x"></i> </a> &nbsp;
                 <a href="https://dblp.org/pid/383/8317" class="icon-link"> <i class="ai ai-dblp ai-2x"></i> </a> &nbsp;
                 <a href="https://www.zhihu.com/people/jszheng21" class="icon-link"> <i class="fa-brands fa-zhihu ai-2x"></i> </a> &nbsp;
+                <a href="https://gitcode.com/jszheng21" class="icon-link" aria-label="GitCode">
+                  <img src="https://cdn-static.gitcode.host/static/images/logo-favicon.png" alt="GitCode" style="width: 30px; height: 30px; vertical-align: middle; filter: grayscale(100%) opacity(0.7); mix-blend-mode: multiply;">
+                </a>
               </p>
             </td>
             <td valign="middle">
@@ -167,15 +180,15 @@
                 <name>Jiasheng Zheng 郑家胜</name>
               </p>
               <p class="introduction">
-                I am a master student of <a href="http://www.icip.org.cn/">Chinese Information Processing Center</a>, Institute of Software, Chinese Academy of Sciences, supervised by Le Sun. 
+                I am a Ph.D. student of <a href="http://www.icip.org.cn/">Chinese Information Processing Center</a>, Institute of Software, Chinese Academy of Sciences, supervised by Le Sun. 
                 In September 2022, I was admitted to study for a M.Sc. degree without entrance examination. 
                 In July 2023, I successfully received my Bachelor of Engineering degree from <a href="http://www2.scut.edu.cn/sse/main.htm">School of Software Engineering</a> of <a href="https://www.scut.edu.cn/">South China University of Technology</a>.
                 <br>
                 My research interests include:
               </p>
               <ul>
-                <li>Natural Language Processing</li>
-                <li>Evaluation of Large Language Models</li>
+                <li>Code Large Language Models</li>
+                <li>Post-training of Large Language Models</li>
               </ul>
 
               <hr style="height:5px; visibility:hidden;" />
@@ -200,6 +213,24 @@
             <col span="1" style="width: 77%;">
           </colgroup>
           <tr>
+            <td valign="center"> 04/2026 </td>
+            <td valign="center">
+              <strong>ScaleBox</strong> is accepted by ACL 2026 Demo
+            </td>
+          </tr>
+          <tr>
+            <td valign="center"> 04/2026 </td>
+            <td valign="center">
+              Officially recognized as a <a href="https://gitcode.com/jszheng21">CANN (Huawei Ascend) Core Contributor</a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center"> 12/2025 </td>
+            <td valign="center">
+              The <strong>first official</strong> long-context code RL practice merged into <a href="https://gitcode.com/cann/cann-recipes-train/blob/master/agent_rl/qwen2_code_rl">CANN main repository</a>.
+            </td>
+          </tr>
+          <tr>
             <td valign="center"> 07/2024 </td>
             <td valign="center">
               Release <a href="https://arxiv.org/abs/2407.11470">Beyond Correctness: Benchmarking Multi-dimensional Code Generation for Large Language Models</a>
@@ -217,6 +248,20 @@
           </tr>
         </table>
         <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <td>
+            <heading2>2026</heading2>
+          </td>
+          <tr>
+            <td valign="center">
+              <papertitle>ScaleBox: Enabling High-Fidelity and Scalable Code Verification for Large Language Models</papertitle>
+              <br>
+              <span class="underline">Jiasheng Zheng</span>, Xin Zheng, Boxi Cao, Pengbo Wang, Zhengzhao Ma, Qiming Zhu, Jiazhen Jiang, Yaojie Lu, Hongyu Lin, Xianpei Han, Le Sun
+              <br>
+              <i>ACL 2026 Demo</i>
+              <br>
+              <a href="https://github.com/icip-cas/ScaleBox">Github</a>
+            </td>
+          </tr>
           <td>
             <heading2>2024</heading2>
           </td>
@@ -258,6 +303,75 @@
         </table>
         <!-- Publications End -->
 
+        <!-- Project Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Projects</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <td>
+            <heading2>2025</heading2>
+          </td>
+          <tr>
+            <td valign="center">
+              <strong>First Official</strong> Long-Context Code RL Training Infrastructure on <strong>Huawei Ascend</strong>
+              <br>
+              <span class="project-description">TL;DR: Based on <a href="https://github.com/verl-project/verl">verl</a> and <a href="https://github.com/icip-cas/ScaleBox">ScaleBox</a>, we validated the effectiveness of Code RL on 1.5B, 4B, and 30B-A3B model scales. This contribution was recognized by the Ascend team and merged into the main repository.</span>
+              <br>
+              <a href="https://gitcode.com/cann/cann-recipes-train/blob/master/agent_rl/qwen2_code_rl">Gitcode</a> /
+              <a href="https://mp.weixin.qq.com/s/oNeQFqdwL5AuOZvwvjbKxQ">WeChat Live</a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              <strong>ScaleBox</strong>: A Scalable Sandbox for Distributed Code Execution, RL Training and Unified Benchmarking
+              <br>
+              <span class="project-description">TL;DR: It supports both NVIDIA and Ascend platforms, and improves the fidelity and efficiency of code validation.</span>
+              <br>
+              <a href="https://github.com/icip-cas/ScaleBox">Github</a> /
+              <a href="https://mp.weixin.qq.com/s/sfAfxtdDR-wibnijDV3b1w">WeChat Article</a>
+            </td>
+          </tr>
+          <tr>
+            <td valign="center">
+              <strong>ReasoningLens</strong>: A User-friendly Toolkit to Visualize, Understand, and Debug Model Reasoning Chains
+              <br>
+              <span class="project-description">TL;DR: Out-of-the-box and integrated into <a href="https://github.com/open-webui/open-webui">Open WebUI</a>.</span>
+              <br>
+              <a href="https://github.com/icip-cas/ReasoningLens">Github</a> /
+              <a href="https://huggingface.co/blog/Bowieee/reasoninglens">Blog</a>
+            </td>
+          </tr>
+        </table>
+        <!-- Project End -->
+
+        <!-- Intern Begin -->
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
+          <tr>
+            <td>
+              <heading>Internships</heading>
+            </td>
+          </tr>
+        </table>
+        <table width="100%" align="center" border="0" cellpadding="12" style="table-layout:fixed;">
+          <colgroup>
+            <col span="1" style="width: 23%;">
+            <col span="1" style="width: 77%;">
+          </colgroup>
+          <tr>
+            <td valign="center"><a href="https://bj.ke.com">Beike</a></td>
+            <td>
+              <span><i>LLM Algorithm Engineer</i>, Beijing, China, 10/2024 - 06/2025</span>
+              <br>
+              <span>Alignment & Knowledge Injection in LLMs for the home decoration domain</span>
+            </td>
+          </tr>
+        </table>
+        <!-- Intern End -->
+
         <!-- Awards Begin -->
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="12">
           <tr>
@@ -272,13 +386,22 @@
             <col span="1" style="width: 77%;">
           </colgroup>
           <tr>
+            <td valign="center">2026</td>
+            <td>
+              <span><strong>CANN (Huawei Ascend) Core Contributor</strong></span> &nbsp;
+              <a href="https://gitcode.com/jszheng21" target="_blank">
+                <img src="https://cdn-news.gitcode.com/news/%E6%A0%B8%E5%BF%83%E8%B4%A1%E7%8C%AE%E8%80%85%20@4x_1769675275549.png" alt="CANN Core Contributor" style="height: 44px; vertical-align: middle;">
+              </a>
+            </td>
+          </tr>
+          <tr>
             <td valign="center">2024</td>
             <td>
               <span>University of Chinese Academy of Sciences (UCAS) Outstanding Student</span>
             </td>
           </tr>
           <tr>
-            <td valign="center">2020, 2021</td>
+            <td valign="center">2020, 2021, 2022</td>
             <td>
               <span>South China University of Technology (SCUT) Second-Class Scholarship</span>
             </td>
